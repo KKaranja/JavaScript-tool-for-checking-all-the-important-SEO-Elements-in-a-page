@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: hsla(312, 4%, 51%, 0.283);
+  color: blue;
+  font-family: 'Chicle', cursive;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: hsla(189, 26%, 79%, 0.749);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+}
+/* h1 {
+  color: red;
+} */
+p {
+  font-size: 1.125rem;
+  font-weight: bolder;
+}
+
+li {
+  list-style: none;
+  margin: 10px 0;
+  padding: 5px 7px;
+  color: green;
+}
+
+li .meta {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 20px 0;
+  padding: 10px 20px;
+}
+
+#submit-button {
+  background-color: green;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Acme', sans-serif;
+}
+#submit-button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: green;
+
+  border: 1px solid green;
+}
+
+label {
+  font-size: 40px;
+  text-align: center;
+  color: #00000080;
+}
+/* Testing code */
+.input-box {
+  position: relative;
+  width: 350px;
+}
+
+.input-box input {
+  position: relative;
+  padding: 8px 10px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background: transparent;
+  color: whitesmoke;
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+  z-index: 2;
+}
+
+.input-box i {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  background: linear-gradient(45deg, #2196f3, #ff4685);
+  transition: 0.5s;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.input-box input:valid ~ i,
+.input-box input:focus ~ i {
+  height: 100%;
+  border-radius: 6px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.meta-tag {
+  font-size: 1.25rem;
+  color: hsl(222, 47%, 26%);
+  font-style: oblique;
+  font-weight: bold;
+  font-family: 'Almendra', serif;
+}
+.meta-content {
+  font-size: 1.0625rem;
+  color: hsl(300, 70%, 29%);
+  font-style: italic;
+  font-family: 'Chicle', cursive;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.875rem;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+.link {
+  font-size: 1.125rem;
+  color: #6c00ff;
+}
+
+.title-tag {
+  color: #852999;
+}
+.title-tag[title] {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-tag[title]:before {
+  content: attr(title);
+  top: 110%;
+  left: 0;
+  padding: 4px 8px;
+  background: #000;
+  color: #fff;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.title-tag[title]:hover:before {
+  visibility: visible;
+}
